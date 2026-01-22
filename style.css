@@ -2,6 +2,7 @@
     font-family: "Sour Gummy", sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 :root{
     --dark:#25344f;
@@ -286,9 +287,6 @@ bottom: -160px;
 }
 
 
-
-
-
 .floating-shape {
   position: absolute;
 opacity: 0.4;
@@ -369,6 +367,7 @@ opacity: 0.4;
 
 
 
+
 .order-section {
   min-height: 100vh;
   background: linear-gradient(to bottom, var(--wine), var(--sand));
@@ -376,7 +375,48 @@ opacity: 0.4;
   flex-direction: column;
   align-items: center;
   padding: 100px 20px;
+position: relative;
+overflow: hidden;
 }
+
+
+/* контейнер */
+.order-photos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* общие стили фото */
+.order-photo {
+  position: absolute;
+  width: 220px;
+  border-radius: 20px;
+    filter: drop-shadow(0 7px 7px var(--dark) );
+  animation: breathe 3s ease-in-out infinite;
+}
+
+/* левое фото */
+.order-photo.left {
+  left: 60px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+/* правое фото */
+.order-photo.right {
+  right: 60px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+
 
 .order-title {
     color: var(--sand); 
@@ -393,6 +433,7 @@ opacity: 0.4;
   width: 100%;
   max-width: 420px;
   box-shadow: 0 20px 40px var(--brown);
+  z-index: 2;
 }
 
 .form-group {
@@ -467,7 +508,7 @@ opacity: 0.4;
 .contact-title {
     color: var(--sand); 
      font-size: 48px;
-     margin-bottom: 60px;
+     margin-bottom: 40px;
      text-align: center;
      z-index: 2;
 }
@@ -486,7 +527,7 @@ opacity: 0.4;
   border-radius: 30px;
   color: var(--sand);
   width: 350px;
-  box-shadow: 0 10px 20px var(--dark);
+  box-shadow: 0 20px 40px var(--dark);
 }
 
 .contact-info h3 {
@@ -504,7 +545,7 @@ opacity: 0.4;
   padding: 40px;
   border-radius: 30px;
   width: 350px;
-  box-shadow: 0 20px 40px var(--brown);
+  box-shadow: 0 20px 40px var(--dark);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -556,9 +597,83 @@ opacity: 0.4;
 }
 
 
-@media screen {
+
     
+.contact-section {
+  position: relative;
+  overflow: hidden;
 }
+
+
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+
+.contact-bg .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0.25;
+  animation: blobFloat 3s infinite alternate ease-in-out;
+}
+
+
+.b1 {
+  width: 160px;
+  height: 160px;
+  background: var(--wine);
+  left: 120px;
+  top: 10%;
+}
+
+.b2 {
+  width: 220px;
+  height: 220px;
+  background: var(--wine);
+  right: -100px;
+  top: 20%;
+  animation-delay: 2s;
+}
+
+.b3 {
+  width: 300px;
+  height: 300px;
+  background: var(--wine);
+  left: -140px;
+  bottom: 15%;
+  animation-delay: 4s;
+}
+
+
+
+.b4 {
+  width: 180px;
+  height: 180px;
+  background: var(--wine);
+  left: 40%;
+  top: 55%;
+  animation-delay: 8s;
+}
+
+
+.contact-section > *:not(.contact-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+
+@keyframes blobFloat {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-50px) scale(1.15);
+  }
+}
+
 
 
 @keyframes FloatTop{
