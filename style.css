@@ -101,7 +101,7 @@ header img:hover {
 /*эбаут*/
 .about-section {
   position: relative;
-  min-height: 5vh;
+  min-height: 10vh;
   background: linear-gradient(to bottom, var(--sand), var(--steel));
   display: flex;
   align-items: flex-start;
@@ -192,7 +192,7 @@ bottom: -160px;
 
 
 .gallery-section {
-  min-height: 100vh;
+  min-height: 60vh;
   width: 100%;
   background: linear-gradient(to bottom, var(--steel) , var(--wine));
   padding: 100px 0;
@@ -365,6 +365,10 @@ opacity: 0.4;
 }
 
 
+
+
+
+
 .order-section {
   min-height: 100vh;
   background: linear-gradient(to bottom, var(--wine), var(--sand));
@@ -375,9 +379,11 @@ opacity: 0.4;
 }
 
 .order-title {
-  color: var(--sand);
-  font-size: 42px;
-  margin-bottom: 40px;
+    color: var(--sand); 
+     font-size: 48px;
+     margin-bottom: 40px;
+     text-align: center;
+     z-index: 2;
 }
 
 .order-form {
@@ -443,6 +449,12 @@ opacity: 0.4;
   color: var(--sand);
   transform: scale(1.05);
 }
+
+
+
+
+
+
 .contact-section {
   min-height: 50vh;
   background: linear-gradient(to bottom, var(--sand), var(--dark));
@@ -544,6 +556,9 @@ opacity: 0.4;
 }
 
 
+@media screen {
+    
+}
 
 
 @keyframes FloatTop{
