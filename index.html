@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+     <header>
+        
+        <a href="index.html"><img src="img/logo_coff.png" alt="" class="logo"></a>
+        <nav>
+            <a href="#about">über uns</a>
+            <a href="#gallery">galerie</a>
+            <a href="#shipment">bestellen</a>
+            <a href="#contact">kontakt</a>
+        </nav>
+        </header>
+<div class="main">
+    <div class="image-box">
+        <img src="img/logo_brown.png" alt="center image" class="animated-img">
+    </div>
+    <div class="title animated-title">WELCOME</div>
+    <div class="subtitle animated-subtitle">digital mood</div>
+</div>
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-text cloud cloud-top">
+      <h2>über uns</h2>
+      <p>Bei uns trifft Nachhaltigkeit auf Kreativität. Wir glauben daran, dass Mode nicht nur schön, sondern auch bewusst sein kann. Jedes Stück, das bei uns entsteht, erzählt seine eigene Geschichte – sorgfältig ausgewählt, liebevoll aufbereitet und mit einem einzigartigen Print versehen.</p>
+    </div>
+    <div class="bottom-row">
+      <div class="planet">
+        <img src="img/planer black.png" alt="Planet">
+      </div>
+      <div class="about-text cloud cloud-bottom">
+        <p>Unsere Mission ist es, Mode neu zu denken: stilvoll, nachhaltig und unverwechselbar. Wir möchten, dass jedes Teil, das Sie tragen, nicht nur Ihren Look, sondern auch Ihre Werte widerspiegelt.</p>
+      </div>
+    </div>
+    <div class="about-images">
+  <img src="img/tshirt.png" alt="T-shirt" class="about-img tshirt">
+  <img src="img/jeans.png" alt="Jeans" class="about-img jeans">
+</div>
+
+  </div>
+  </section>
+
+
+<section class="gallery-section" id="gallery">
+    <h2 class="gallery-title">GALERIE</h2>
+    <div class="shape-top"></div>
+  <div class="floating-shape shape-left1"></div>
+  <div class="floating-shape shape-left2"></div>
+  <div class="floating-shape shape-left3"></div>
+  <div class="floating-shape shape-right1"></div>
+  <div class="floating-shape shape-right2"></div>
+  <div class="floating-shape shape-right3"></div>
+
+  <div class="gallery-cards">
+
+    <div class="gallery-card">
+      <div class="slider">
+        <div class="slider-track">
+        <img src="img/jeansfront.jpg" class="active">
+        <img src="img/jeansback.jpg">
+      </div>
+      </div>
+
+      <div class="controls">
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+      </div>
+
+      <p class="caption">JEANS</p>
+      <button class="buy-button">KAUFEN</button>
+    </div>
+
+    <div class="gallery-card">
+      <div class="slider">
+        <div class="slider-track">
+        <img src="img/tshirtmanfront.jpg" class="active">
+        <img src="img/tshirtmanback.jpg">
+        <img src="img/tshirtwoman.jpg" alt="">
+      </div>
+      </div>
+
+      <div class="controls">
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+      </div>
+
+      <p class="caption">T-SHIRT</p>
+      <button class="buy-button">KAUFEN</button>
+    </div>
+
+  </div>
+</section>
+<section id="shipment">
+
+</section>
+<section class="order-section" id="shipment">
+  <h2 class="order-title">Bestellung aufgeben</h2>
+
+  <form class="order-form">
+    <div class="form-group">
+      <label>NAME</label>
+      <input type="text" placeholder="Vorname, Nachhame" required>
+    </div>
+
+    <div class="form-group">
+      <label>EMAIL</label>
+      <input type="email" placeholder="example@mail.com" required>
+    </div>
+
+    <div class="form-group">
+      <label>MOBILE NUMMER</label>
+      <input type="tel" placeholder="+41 00 000 0000" required>
+    </div>
+
+    <div class="form-group">
+      <label>PRODUKT</label>
+      <select required>
+        <option value="">Produkt auswählen</option>
+        <option>Jeans</option>
+        <option>T-Shirt</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>GRÖSSE</label>
+      <select required>
+        <option value="">Grösse auswählen</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Kommentar</label>
+      <textarea placeholder="Kommentar zur Bestellung"></textarea>
+    </div>
+
+    <button type="submit" class="order-btn">Заказать</button>
+  </form>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
