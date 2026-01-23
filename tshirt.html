@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>Produktseite - Jeans</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+  }
+
+  body {
+    background-color: #25344f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1;
+  }
+
+  .product-image {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+  }
+
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+
+  .slider-track img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .slider-controls button {
+    background-color: #d5b893;
+    border: none;
+    padding: 10px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+
+  }
+
+  .slider-controls button:hover {
+    background-color: #d5b893;
+  }
+
+  .product-info {
+    flex: 1;
+    min-width: 280px;
+    background-color: #632024;
+    color: #f5e6d3;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-info h1 {
+    font-size: 36px;
+  }
+
+  .product-info p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .product-info label {
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .product-info select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background: #d5b893;
+    color: #632024;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .buttons a {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .add-cart {
+    background-color: #d5b893;
+    color: #632024;
+    transition: 0.3s;
+  }
+
+  .add-cart:hover {
+    background-color: #f5e6d3;
+  }
+
+  .back-home {
+    background-color: #617891;
+    color: #f5e6d3;
+    transition: 0.3s;
+  }
+
+  .back-home:hover {
+    background-color: #25344f;
+  }
+
+  footer {
+    background-color: #25344f;
+    color: #f5e6d3;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  
+  }
+  .logo-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.breathing-logo-img {
+  width: 120px;          /* можно менять */
+  opacity: 0.85;
+  animation: logoBreath 3.5s ease-in-out infinite;
+}
+
+@keyframes logoBreath {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Слайдер товара -->
+  <div class="product-image">
+    <div class="slider">
+      <div class="slider-track">
+        <img src="img/tshirtmanfront.jpg" alt="Jeans Vorderseite">
+        <img src="img/tshirtmanback.jpg" alt="Jeans Rückseite">
+      </div>
+      <div class="slider-controls">
+        <button id="prev">‹</button>
+        <button id="next">›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Информация о товаре -->
+  <div class="product-info">
+    <h1>T-Shirt</h1>
+    <p>
+
+Hochwertiges T-Shirt aus nachhaltiger Baumwolle, weich auf der Haut und angenehm zu tragen. Das minimalistische Design trifft auf eine moderne Passform und macht dieses Shirt zum perfekten Begleiter für Alltag, Streetwear und besondere Anlässe. Atmungsaktiv, langlebig und formstabil – entwickelt für Menschen, die Stil und Komfort schätzen.</p>
+    
+    <div class="size-selection">
+      <label for="size">Grösse auswählen:</label>
+      <select id="size">
+        <option value="">Grösse wählen</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <a href="https://example.com" class="add-cart">In den Warenkorb</a>
+      <a href="index.html" class="back-home">Zurück zur Hauptseite</a>
+    </div>
+     <div class="logo-wrapper">
+  <img src="img/logo_coff.png" alt="" class="breathing-logo-img">
+</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 OUTWRLD · Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+  const track = document.querySelector('.slider-track');
+  const slides = Array.from(track.children);
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  function updateSlide() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+</script>
+
+</body>
+</html>
