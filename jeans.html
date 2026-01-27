@@ -199,8 +199,8 @@
   <div class="product-image">
     <div class="slider">
       <div class="slider-track">
-        <img src="img/jeansfront.jpg" alt="Jeans Vorderseite">
-        <img src="img/jeansback.jpg" alt="Jeans Rückseite">
+        <img src="jeansfront.jpg" alt="Jeans Vorderseite">
+        <img src="jeansback.jpg" alt="Jeans Rückseite">
       </div>
       <div class="slider-controls">
         <button id="prev">‹</button>
@@ -209,7 +209,6 @@
     </div>
   </div>
 
-  <!-- Информация о товаре -->
   <div class="product-info">
     <h1>Jeans</h1>
     <p>Hochwertige Jeans aus nachhaltigem Material, bequem und stilvoll. Perfekt für jeden Anlass und in verschiedenen Größen erhältlich.</p>
@@ -230,7 +229,7 @@
       <a href="index.html" class="back-home">Zurück zur Hauptseite</a>
     </div>
      <div class="logo-wrapper">
-  <img src="img/logo_coff.png" alt="" class="breathing-logo-img">
+  <img src="logo_coff.png" alt="" class="breathing-logo-img">
 </div>
   </div>
 </div>
@@ -239,28 +238,7 @@
   <p>© 2026 OUTWRLD · Alle Rechte vorbehalten</p>
 </footer>
 
-<script>
-  const track = document.querySelector('.slider-track');
-  const slides = Array.from(track.children);
-  const prevBtn = document.getElementById('prev');
-  const nextBtn = document.getElementById('next');
 
-  let currentIndex = 0;
-
-  function updateSlide() {
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlide();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlide();
-  });
-</script>
 
 </body>
 </html>
