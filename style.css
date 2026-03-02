@@ -931,7 +931,7 @@ overflow: hidden;
 
 
   .floating-shape {
-    display: none !important;
+    display: none;
   }
 }
 
