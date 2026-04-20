@@ -200,7 +200,7 @@ bottom: -160px;
 
 
 
-
+/*галери*/
 .gallery-section {
   min-height: 60vh;
   width: 100%;
@@ -208,7 +208,9 @@ bottom: -160px;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
+
 .gallery-title {
      color: #f5e6d3; 
      font-size: 48px;
@@ -252,8 +254,12 @@ bottom: -160px;
   justify-content: center;
   gap: 60px;
   z-index: 100;
-
+  position: relative;
+  z-index: 2;
 }
+
+
+
 
 .gallery-card {
   width: 280px;
@@ -302,7 +308,7 @@ bottom: -160px;
   position: absolute;
 opacity: 0.4;
   border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%; 
-  z-index: 0;
+  z-index: 1;
   animation: floatMorph 3s ease-in-out infinite alternate;
 }
 
@@ -932,7 +938,6 @@ overflow: hidden;
 
   .floating-shape {
     display: none;
-    z-index: 0;
   }
 }
 
