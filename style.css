@@ -12,6 +12,16 @@
     --brown:#6f4d38;
 }
 
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: var(--steel);
+  width: 0%;
+  z-index: 2000;
+}
+
 
 header {
     background-color: #25344f;
@@ -25,7 +35,7 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-     box-shadow: 0 6px 20px #6f4d38;
+     box-shadow: 0 6px 20px var(--steel);
     overflow: visible;
 }
 header nav {
@@ -38,30 +48,14 @@ header nav a {
     color: #d5b893;         
     text-decoration: none;   
     font-size: 20px;
-      text-shadow: 4px 4px 4px #6f4d38;
+      text-shadow: 4px 4px 4px var(--steel);
     transition: 0.4s;        
     transform: translateX(0);
     
 }
 header nav a:hover {
     transform: translateY(3px);
-    text-shadow: 6px 6px 6px #6f4d38;
-}
-.lang-btn {
-  margin-right: 20px;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 10px;
-  background: var(--sand);
-  color: var(--wine);
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.lang-btn:hover {
-  background: var(--brown);
-  color: var(--sand);
+    text-shadow: 6px 6px 6px var();
 }
 header img {
     width: 80px;
@@ -216,7 +210,7 @@ bottom: -160px;
 
 
 
-/*галери*/
+
 .gallery-section {
   min-height: 60vh;
   width: 100%;
@@ -224,9 +218,7 @@ bottom: -160px;
   padding: 100px 0;
   position: relative;
   overflow: hidden;
-  isolation: isolate;
 }
-
 .gallery-title {
      color: #f5e6d3; 
      font-size: 48px;
@@ -270,21 +262,22 @@ bottom: -160px;
   justify-content: center;
   gap: 60px;
   z-index: 100;
-  position: relative;
-  z-index: 10;
+
 }
-
-
-
 
 .gallery-card {
   width: 280px;
   background: var(--wine);
   border-radius: 25px;
   padding: 20px;
-    z-index: 11;
-}
+  transition: transform 0.4s, box-shadow 0.4s;
 
+
+
+}.gallery-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 25px 40px var(--dark);
+}
 .slider {
   overflow: hidden;
   border-radius: 20px;
@@ -325,7 +318,7 @@ bottom: -160px;
   position: absolute;
 opacity: 0.4;
   border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%; 
-  z-index: 1;
+  z-index: 0;
   animation: floatMorph 3s ease-in-out infinite alternate;
 }
 
@@ -816,11 +809,13 @@ overflow: hidden;
 }
 
 
-
+/* ===================================== */
+/* 📱 ПОЛНАЯ АДАПТАЦИЯ ДЛЯ ВСЕХ СЕКЦИЙ  */
+/* ===================================== */
 
 @media (max-width: 768px) {
 
- 
+  /* ===== Общие настройки ===== */
 
   body {
     overflow-x: hidden;
@@ -922,69 +917,69 @@ overflow: hidden;
 
 
   /* ===== GALLERY ===== */
-
+/* 📱 Адаптация галереи под мобильные */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
 
   .gallery-section {
-    padding: 40px 0;
+    padding: 40px 0; /* уменьшаем вертикальные отступы */
   }
 
   .gallery-cards {
-    display: flex;         
-    flex-direction: column; 
-    align-items: center;  
+    display: flex;          /* flex для центрирования */
+    flex-direction: column; /* карточки друг под другом */
+    align-items: center;    /* по центру */
     width: 92%;
     margin: 0 auto;
-    gap: 20px;             
+    gap: 20px;              /* расстояние между карточками */
   }
 
   .gallery-card {
-    width: 100%;  
-    max-width: 320px; 
+    width: 100%;   /* растягиваем карточку на всю ширину */
+    max-width: 320px; /* ограничиваем максимальную ширину для красоты */
   }
 
   .slider-track,
   .slider-track img {
-    width: 100%;  
+    width: 100%;   /* адаптируем слайдер */
     height: auto;
   }
 
-
+  /* Скрываем все плавающие фигуры на мобильной */
   .floating-shape {
-    display: none;
+    display: none !important;
   }
 }
 
   /* ===== ORDER ===== */
 
-
+/* 📱 Мобильная адаптация формы заказа — центр */
 @media (max-width: 768px) {
 
   .order-section {
-    min-height: 100vh;         
-    padding: 40px 20px;          
+    min-height: 100vh;          /* чтобы заняло весь экран */
+    padding: 40px 20px;          /* уменьшаем отступы */
     display: flex;
     flex-direction: column;
-    justify-content: center;     
-    align-items: center;       
+    justify-content: center;      /* центр по вертикали */
+    align-items: center;          /* центр по горизонтали */
     position: relative;
   }
 
-
+  /* Скрываем фотографии на мобильных */
   .order-photos {
     display: none !important;
   }
 
   .order-form {
-    width: 100%;              
-    max-width: 420px;         
+    width: 100%;                 /* растянуть на доступную ширину */
+    max-width: 420px;            /* но не больше */
     padding: 20px;
     border-radius: 20px;
-    box-sizing: border-box;     
-    margin: 0;                  
+    box-sizing: border-box;      /* важно, чтобы padding не «ломал» ширину */
+    margin: 0;                   /* flex уже центрирует */
   }
 
   .form-group {
