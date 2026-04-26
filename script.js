@@ -1,4 +1,3 @@
-//скрипт для кнопок перемота картинки//
 document.querySelectorAll('.gallery-card').forEach(card => {
   const track = card.querySelector('.slider-track');
   const imgs = track.children;
@@ -14,7 +13,14 @@ document.querySelectorAll('.gallery-card').forEach(card => {
     track.style.transform = `translateX(-${index * 280}px)`;
   };
 });
-с//скрипт для перевода//
-
-
 // джава скрипт это язык который позволяет оперировать дом моделью// дом модель это dom tree
+window.addEventListener("scroll", () => {
+
+  let scroll = window.scrollY;
+  let height = document.body.scrollHeight - window.innerHeight;
+
+  let progress = (scroll / height) * 100;
+
+  document.querySelector(".scroll-bar").style.width = progress + "%";
+
+});
